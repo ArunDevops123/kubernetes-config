@@ -18,7 +18,7 @@ do
             echo $i
             name=$(kubectl get no | awk '{ print $1 }' | grep $val | awk 'FNR=='$i' {print}')
             echo "$name"
-            kubectl label node $name group4=$val --overwrite
+            kubectl label node $name group=$val --overwrite
             i=$(($i+1))
         done
     else
