@@ -11,7 +11,8 @@ fi
 
 #############################################
 ########### Condition Checking ##############
-node_count=$(cat count.txt | awk '{ print $3 }')
+# node_count=$(cat count.txt | awk '{ print $3 }')
+ node_count=$(cat count.txt  | grep '^ *[1]' | awk '{ print $3 }' | awk '{s+=$1} END {printf "%.0f", s}')
 a=0
 b=1
 until [ $a -ge $node_count ] && [ $b -eq 0 ]
