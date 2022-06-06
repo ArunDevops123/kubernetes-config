@@ -33,7 +33,7 @@ echo "Passed"
 ####################################################
 ################## Tag Attachment ##################
 
-variable='database microservice mnm nmn'
+variable='database microservice mmn nmn'
 
 for val in $variable
 do
