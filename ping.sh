@@ -1,3 +1,4 @@
+#!/bin/bash
 ipaddress=`route -n | grep tunl0 | awk -F' ' '{print $1, $2}'`
 ipaddress=`echo $ipaddress | tr "\n" " "`
 iparray=($ipaddress);
